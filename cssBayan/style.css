@@ -1,16 +1,19 @@
-* {
-	transition: all 0.5s ease;
+#accordeon {
+	max-width: 60%;
+	margin: 0 auto;
 }
 
-#accordeon {
-	max-width: 800px;
-	margin: 0 auto;
+#accordeon h1 {
+	font-size: 3rem;
+	margin: 1rem 0;
+	font-weight: bold;
 }
 
 .line {
 	border-top: 1px solid black;
 	padding: 20px 0;
 	display: block;
+	cursor: pointer;
 }
 
 .line:active .description {
@@ -33,6 +36,10 @@ input {
 	font-size: 30px;
 }
 
+.description p {
+	font-size: 2rem;
+}
+
 .description img {
 	display: none;
 	animation-name: opacity-img;
@@ -45,7 +52,7 @@ input {
 	max-width: 200px;
 	width: 100%;
 	height: auto;
-	margin: 20px auto 0 auto;
+	margin: 1.5rem auto 0 auto;
 	animation-name: smooth-img;
 	animation-duration: 1s;
 }
@@ -108,7 +115,17 @@ input:focus ~ .description {
 
 @media screen and (max-width: 970px) {
 	#accordeon {
-		padding: 0 20px;
+		padding: 0 1.5rem;
+		max-width: 100%;
+	}
+
+	#accordeon h1 {
+		font-size: 2.5rem;
+	}
+
+	.description p {
+		font-size: 1.5rem;
+		max-width: 90%;
 	}
 }
 
@@ -117,10 +134,15 @@ input:focus ~ .description {
 		display: flex;
 		justify-content: space-between;
 		align-items: flex-start;
+		max-width: 100%;
 	}
-	.description img {
-		width: 20px;
-		padding-top: 10px;
-		margin-left: 20px;
+
+	#accordeon h1 {
+		font-size: 2rem;
+	}
+
+	.description p {
+		font-size: 1.3rem;
+		max-width: 90%;
 	}
 }
