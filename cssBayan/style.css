@@ -111,3 +111,16 @@ input:focus ~ .description {
 		padding: 0 20px;
 	}
 }
+
+@media screen and (max-width: 500px) {
+	.description {
+		display: flex;
+		justify-content: space-between;
+		align-items: flex-start;
+	}
+	.description img {
+		width: 20px;
+		padding-top: 10px;
+		margin-left: 20px;
+	}
+}
